@@ -5,7 +5,7 @@ from . import models
 class ContactForm(forms.ModelForm):
     class Meta:
         model = models.Contact
-        fields = ('first_name','last_name',)
+        fields = ('first_name','last_name', 'phone', 'email', 'description', 'category',)
     
     def clean(self):
         cleaned_data = self.cleaned_data
